@@ -253,7 +253,7 @@ a{
         backdrop-filter: blur(12px);
         position: fixed;
         left:0;
-        top:50%;
+        top: 50%;
         width: 20vw;
         height: 90vh;
         transform: translate(0vw, -50%);
