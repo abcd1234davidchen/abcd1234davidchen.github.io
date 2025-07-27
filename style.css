@@ -160,7 +160,7 @@ a{
     color: inherit;
 }
 
-@media (max-width: 900px){
+@media screen and (max-width: 900px){
     .avatar-section {
         width:20vw;
     }
@@ -244,7 +244,7 @@ a{
     }
 }
 
-@media (max-height: 600px) and (orientation: landscape) {
+@media screen and (max-height: 600px) and (orientation: landscape) {
     html {
         scroll-snap-type: none;
     }
