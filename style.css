@@ -166,6 +166,7 @@ a{
     }
     .info-section{
         width: 80vw;
+        margin-top: 0;
         margin-left: 20vw;
     }
 
@@ -265,6 +266,7 @@ a{
     }
     .info-section{
         width: 80vw;
+        margin-top: 0;
         margin-left: 20vw;
     }
     .info-content {
