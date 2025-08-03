@@ -53,7 +53,6 @@ p{
     color: var(--info-text-color);
     font-size: medium;
     line-height: 1.5;
-    padding-left: 30px
 }
 
 a{
@@ -126,7 +125,6 @@ a{
 
 .info-content p{
     font-size: large;
-    padding-left: 0px;
     line-height: 1.5;
 }
 
@@ -143,9 +141,6 @@ a{
     border-radius: 24px;
     border: 1px solid var(--info-text-color);
     text-decoration: none;
-}
-.project p{
-    padding-left: 1rem;
 }
 
 .project:hover{
@@ -173,10 +168,6 @@ a{
         width: 80vw;
         margin-top: 0;
         margin-left: 20vw;
-    }
-
-    .project p{
-        padding-left: 0;
     }
 }
 
@@ -239,10 +230,6 @@ a{
     .project{
         padding: 0.5rem;
         width: 100%;
-    }
-
-    .project p{
-        padding-left: 0;
     }
 }
 
