@@ -48,13 +48,6 @@ h2{
     line-height: 1.5;
 }
 
-h3{
-    font-family: 'Helectiva','Roboto', 'PingFang TC', '微軟正黑體', sans-serif;
-    color: var(--info-text-color);
-    font-size: large;
-    line-height: 1.5;
-}
-
 p{
     font-family: 'Helectiva','Roboto', 'PingFang TC', '微軟正黑體', sans-serif;
     color: var(--info-text-color);
@@ -129,6 +122,12 @@ a{
     justify-content: flex-start;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+}
+
+.info-content p{
+    font-size: large;
+    padding-left: 0px;
+    line-height: 1.5;
 }
 
 .projects-container{
