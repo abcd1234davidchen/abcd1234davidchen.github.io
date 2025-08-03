@@ -6,15 +6,15 @@
     --background-color:white;
     --background-image:
     radial-gradient(at 26% 32%, #48CAE4 0px, transparent 50%),
-    radial-gradient(at 79% 67%, hsla(1650,100%,80%,1) 0px, transparent 50%);
+    radial-gradient(at 79% 67%, #99ccff 0px, transparent 50%);
 }
 @media (prefers-color-scheme: dark){
     :root {
         --info-text-color: white;
         --background-color:black;
         --background-image:
-        radial-gradient(at 26% 32%, hsla(1660,97%,13%,1) 0px, transparent 50%),
-        radial-gradient(at 79% 67%, rgb(57, 111, 165) 0px, transparent 50%);
+        radial-gradient(at 26% 32%, #011641 0px, transparent 50%),
+        radial-gradient(at 79% 67%, #396fa5 0px, transparent 50%);
     }
 }
 
@@ -70,7 +70,7 @@ a{
 
 .scroll{
     padding-left: 0px;
-    padding-top: 40px;
+    padding-top: 20px;
     animation: bounce 2s infinite;
 }
 @keyframes bounce {
