@@ -16,6 +16,9 @@
         radial-gradient(at 26% 32%, #011641 0px, transparent 50%),
         radial-gradient(at 79% 67%, #396fa5 0px, transparent 50%);
     }
+    .clickable-icon{
+        filter: invert(1);
+    }
 }
 
 html {
@@ -25,10 +28,20 @@ html {
 
 body {
     background-color: var(--background-color);
-    background-image: var(--background-image);
-    background-attachment: fixed;
     margin:0;
     padding:0%;
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+    background-attachment: fixed;
+    z-index: -1;
 }
 
 h1{
