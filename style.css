@@ -81,7 +81,7 @@ a{
     position: fixed;
     left:0;
     top:50%;
-    width: 40vw;
+    width: 35vw;
     height: 90vh;
     transform: translate(0vw, -50%);
 
@@ -109,8 +109,8 @@ a{
 }
 
 .info-section {
-    width: 55%;
-    margin-left: 45%;
+    width: 60%;
+    margin-left: 40%;
 }
 
 .info-content{
@@ -141,6 +141,16 @@ a{
     border-radius: 24px;
     border: 1px solid var(--info-text-color);
     text-decoration: none;
+}
+
+.project h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.project p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .project:hover{
