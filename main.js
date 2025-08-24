@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
         });
         showAvatar(currentSection);
     }
+    showAvatar(0);
     window.addEventListener('scroll', onScroll);
-    onScroll();
+    window.addEventListener('load', onScroll);
 });
