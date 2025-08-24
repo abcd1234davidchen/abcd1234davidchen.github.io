@@ -63,7 +63,6 @@ a{
 
 .scroll{
     padding-left: 0px;
-    padding-top: 20px;
     animation: bounce 2s infinite;
 }
 @keyframes bounce {

@@ -3,7 +3,16 @@ document.addEventListener('DOMContentLoaded', function(){
     const sections = document.querySelectorAll('.info-content');
     function showAvatar(index){
         avatarContents.forEach((el,i)=>{
-            el.classList.toggle('active', i === index);
+            if(i === index){
+                const img = el.querySelector('img');
+                if(img && !img.complete){
+                    img.onload = () => el.classList.add('active');
+                } else {
+                    el.classList.add('active');
+                }
+            } else {
+                el.classList.remove('active');
+            }
         })
     }
     function onScroll(){
