@@ -1,31 +1,29 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const avatarContents = document.querySelectorAll('.avatar-content');
+document.addEventListener('DOMContentLoaded', () => {
+    const avatars = document.querySelectorAll('.avatar-content');
     const sections = document.querySelectorAll('.info-content');
-    function showAvatar(index){
-        avatarContents.forEach((el,i)=>{
-            if(i === index){
-                const img = el.querySelector('img');
-                if(img && !img.complete){
-                    img.onload = () => el.classList.add('active');
-                } else {
-                    el.classList.add('active');
-                }
-            } else {
-                el.classList.remove('active');
-            }
-        })
-    }
-    function onScroll(){
-        let currentSection = 0;
-        sections.forEach((el,i)=>{
-            const rect = el.getBoundingClientRect();
-            if(rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2){
-                currentSection = i;
-            }
+    let scheduled = false;
+
+    function updateAvatar() {
+        const center = window.innerHeight / 2;
+        let current = 0;
+        sections.forEach((section, index) => {
+            if (section.getBoundingClientRect().top <= center) current = index;
         });
-        showAvatar(currentSection);
+        avatars.forEach((avatar, index) => {
+            avatar.classList.toggle('active', index === current);
+        });
+        scheduled = false;
     }
-    showAvatar(0);
-    window.addEventListener('scroll', onScroll);
-    window.addEventListener('load', onScroll);
+
+    function scheduleUpdate() {
+        if (!scheduled) {
+            scheduled = true;
+            window.requestAnimationFrame(updateAvatar);
+        }
+    }
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('load', scheduleUpdate);
+    updateAvatar();
 });

@@ -1,3 +1,4 @@
 # Ignore unneeded files
 src/avatar*
 src/bg*
+.DS_Store
