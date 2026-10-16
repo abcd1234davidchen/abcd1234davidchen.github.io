@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const avatars = document.querySelectorAll('.avatar-content');
     const sections = document.querySelectorAll('.info-content');
+    const sectionLinks = document.querySelectorAll('.section-nav a');
     let scheduled = false;
 
     function updateAvatar() {
@@ -11,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         avatars.forEach((avatar, index) => {
             avatar.classList.toggle('active', index === current);
+        });
+        sectionLinks.forEach((link, index) => {
+            if (index === current) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
         });
         scheduled = false;
     }
